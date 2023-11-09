@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lock</title>
+    <link rel="icon" type="image/x-icon" href="images/favi.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      /* Slide-up animation */
+      @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+        from { width: 0% }
+        to { width: 100% }
+      }
+
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: white; }
+      }
+
+     
+
+      .typewriter {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid white; /* The typewriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        /* letter-spacing: .15em; Adjust as needed */
+        animation: 
+            typing 2.3s steps(10, end),
+            blink-caret .75s step-end infinite;
+      }
+     
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            background-color: #2D3436;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 15px;
+        }
+
+        .app-title {
+            font-size: 40px;
+            margin-bottom: 10px;
+            /* animation: slideUp 1s ease-out; */
+        }
+        
+        .app-description {
+            font-size: 20px;
+            margin-bottom: 20px;
+            animation: slideUp 1.5s ease-out;
+
+        }
+        .app-links {
+            animation: slideUp 1.8s ease-out;
+        }
+        .app-title img {
+            height: 80px;
+            width: auto;
+        }
+
+       
+
+        .download-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-button img {
+            height: 60px;
+            width: auto;
+        }
+        .privacy-policy p {
+          color: white
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .app-description {
+                font-size: 18px;
+            }
+
+            .app-title {
+                font-size: 35px;
+            }
+
+            .download-button img {
+                height: 50px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <div class="app-title">
+          <img src="images/icon.png" alt="Download on the App Store">
+          <h2 class="typewriter">THE LOCK</h2>
+        </div>
+        <div class="app-description">
+          A game to guess numbers with a spinner. Enjoy haptic feedback and
+          visuals as hints and collect different themes. Share your average guess time across difficulties.
+        </div>
+        <div  class="app-links">
+          <a class="download-button" href="https://twitter.com/DEV_0x07" target="_blank"">
+            <img src="images/app-store-button.png" alt="Download on the App Store">
+          </a>
+          <a href="privacy-policy.html" class="privacy-policy">
+            <p>Privacy Policy</p>
+        </a>
+        </div>
+       
+    </div>
+</body>
+</html>
